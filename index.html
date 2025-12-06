@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate Beach Game</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- MAIN MENU -->
+    <div id="menuScreen" class="screen">
+        <h1 class="menu-title">🏖️ Ultimate Beach Catch</h1>
+        
+        <div class="skin-select">
+            <p>Select Your Bucket:</p>
+            <div class="skins">
+                <span class="skin" data-skin="🪣">🪣</span>
+                <span class="skin" data-skin="🍍">🍍</span>
+                <span class="skin" data-skin="🐳">🐳</span>
+                <span class="skin" data-skin="🐚">🐚</span>
+            </div>
+        </div>
+
+        <button id="startGameBtn" class="menu-btn">▶ Start Game</button>
+        <button id="howBtn" class="menu-btn">❓ How to Play</button>
+    </div>
+
+    <!-- HOW TO PLAY -->
+    <div id="howScreen" class="screen hidden">
+        <h2>How to Play</h2>
+        <p>⬅️ Move Left | ➡️ Move Right</p>
+        <p>Catch shells & stars!</p>
+        <p>Avoid crabs and NEVER catch a bomb!</p>
+        <button id="backBtn" class="menu-btn">⬅ Back</button>
+    </div>
+
+    <!-- GAME UI -->
+    <div id="gameUI" class="hidden">
+        <h1 class="title">🏖️ Ultimate Beach Catch!</h1>
+
+        <div class="info-bar">
+            <p id="scoreText">Score: 0</p>
+            <p id="timerText">Time: 60</p>
+            <p id="levelText">Level: 1</p>
+        </div>
+
+        <!-- GAME AREA -->
+        <div id="gameArea">
+            <div class="shoreline">🌊🌊🌊🌊🌊🌊🌊🌊</div>
+            <div class="cloud cloud1">☁️</div>
+            <div class="cloud cloud2">☁️</div>
+
+            <div id="bucket">🪣</div>
+        </div>
+
+        <!-- MOBILE CONTROLS -->
+        <div class="mobile-controls">
+            <button id="leftBtn">⬅️</button>
+            <button id="rightBtn">➡️</button>
+        </div>
+
+        <button id="restartBtn" class="menu-btn restart">🔄 Restart</button>
+    </div>
+
+    <!-- SOUNDS -->
+    <audio id="bgMusic" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_ce1fb2a76b.mp3?filename=calm-waves-ambient-110236.mp3" loop></audio>
+    <audio id="catchSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_f49367e3b1.mp3?filename=click-124467.mp3"></audio>
+    <audio id="missSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_011f6f2257.mp3?filename=error-126627.mp3"></audio>
+    <audio id="explosionSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_0e2d3e7b7a.mp3?filename=explosion-101soundboards.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
